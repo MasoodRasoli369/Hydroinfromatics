@@ -1,0 +1,119 @@
+# This is the file for Parameters needed for calculation.
+# Pay attention to the units.
+# ******************************************************************
+# ******************************************************************
+# The number given at first of lines should match the line number in the txt, otherwise it will not work.
+# Insert All the values in second column, and time vectors in first column.
+# ******************************************************************
+# --------------------------------------------------------------------
+# Insert Length and Time of Discretization.
+# 10------------------------------------------------------------------
+Length		600		# Length of the channel 		(m)
+Time		2000		# Time of analysis			(sec)
+SpaceStep	30		# Space step of analysis 		(m)
+TimeStep	10		# Time Step of analysis			(sec)
+# ------------------------------------------------------------------------
+# Insert Initial Conditions.
+# 17----------------------------------------------------------------------
+Q		0		# It is the discharge at initial time.	(m3/s)
+h		0.5		# It is the height at initial time.	(m)
+# ------------------------------------------------------------------------
+# Insert Channel Specifications.
+# 22------------------------------------------------------------------------
+C		1000000		# Chezy constant of channel. 		(m^0.5/sec)
+b		75		# Width of the channel.			(m)
+s		0.00		# Slope of the channel.			(N.A)
+# ------------------------------------------------------------------------
+# Insert Scheme Weighting Factors.
+# 28------------------------------------------------------------------------
+tita           0.5		# Weighting factor in space derivative.	
+kasi           0.5		# Weighting factor in time derivative.
+# -----------------------------------------------------------------------------
+# Are the boundary conditions constant or varying.
+# 33-----------------------------------------------------------------------------
+# If it is constant write C else write V (in capital) in next line.
+B.Conditon	C		# Constant or Varying Boundary Condition
+# --------------------------------------------------------------------------
+# Identify the boundary conditions either they are Discharge or Height.
+# 38--------------------------------------------------------------------------
+# What is given at Left boundary Height or Discharge put Q or H (in capital) in the next line.
+L.Boundry	H		# Data in Left Boundry	
+# What is given at the right Boundary Height or Discharge put Q or H (in capital) in the next line.
+R.Boundry	H		# Data in Right Boundry
+# ----------------------------------------------------------------------
+# Insert Constant Boundary Conditions
+# ----------------------------------------------------------------------
+# Insert the constant Left Boundary Condition
+# 47----------------------------------------------------------------------
+Q or h: 	2.5		# It is discharge or height at left boundary condition
+# --------------------------------------------------------------------------
+# Insert the constant Right Boundary Condition
+# 51--------------------------------------------------------------------------
+Q or h:		2.5		# It is discharge or height at left boundry condition
+# ----------------------------------------------------------------------------------
+# Insert the varying boundary conditions In the below two tables.
+# ----------------------------------------------------------------------------------
+# Insert the Varying Left Boundary Conditions
+# 57----------------------------------------------------------------------------------
+Time(Sec)	Discharge(m3/s) or Height(m)
+0		10		
+3600		11
+7200		12
+10800		12
+14400		10
+18000		10
+21600		10
+25200		6
+28800		6
+32400		6
+# ----------------------------------------------------------------------------------
+# Insert the Varying Right Boundary Conditions
+# 71----------------------------------------------------------------------------------
+Time(Sec)	Discharge(m3/s) or Height(m)
+0		9		
+3600		9
+7200		9
+10800		9
+14400		9
+18000		9
+21600		12
+25200		12
+28800		12
+32400		12
+# ---------------------------------------------------------------------------------
+# Insert Maximum Number of Iterations
+# 85----------------------------------------------------------------------------------
+Iterations 	15		# Insert the iterations number you want the program to do.
+# ---------------------------------------------------------------------------------
+# Insert the Covergence Criteria
+# 89---------------------------------------------------------------------------------
+C.Criteria	0.01		# Amount of error you want to accept by iterations.
+# ---------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
